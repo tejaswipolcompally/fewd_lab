@@ -1,0 +1,309 @@
+<!-- Problem-2
+Create a Portfolio page using HTML , it should contain 
+-> Self introduction
+-> skills 
+-> projects/work experiences (Git links)
+-> Feedback /achivements
+-> Education profile 
+-> Contact information.(Social media /phone /email) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            margin: 30px;
+            border: 20px;
+            box-shadow: 0 0 0 5px rgb(74, 0, 74);
+            padding: 20px;
+          }
+          
+          .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #38013d;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+          
+          .navitems {
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: color 0.2s;
+            text-decoration: none;
+            margin: 10px;
+          }
+          
+          .navitems:hover {
+            color: #000000;
+          }
+          
+          .lighttext {
+            color: grey;
+          }
+          
+          .alignleft {
+            text-align: left;
+            width: 500px;
+          }
+          
+          #introduction {
+            width: 100%;
+          }
+          
+          .introduction-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          
+          .introduction-image {
+            width: 30%;
+            height: auto;
+            margin-left: 15px;
+            margin-right: 10px;
+            border-radius: 15px;
+          }
+          
+          .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+          }
+          
+          .card h2 {
+            margin-top: 0;
+          }
+          
+          .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+          
+          .card li {
+            margin-bottom: 10px;
+          }
+          
+          .card a {
+            text-decoration: none;
+            color: #337ab7;
+          }
+          
+          .card a:hover {
+            color: #23527c;
+          }
+          table{
+            padding:10px;
+            border-collapse:collapse;
+          }
+          thead{
+            background-color: #230132;
+            color:white;
+            
+          }
+          
+          th,td{
+            padding:15px;
+          }
+          tr:hover{
+            background-color: #eae7e7
+          }
+          button{
+            background-color: #310145;
+            color:white;
+            border-radius: 5px;
+            padding:5px;
+          }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar">
+            <a class="navitems" href="#introduction">Introduction</a>
+            <a class="navitems" href="#skills">Skills</a>
+            <a class="navitems"href="#projects">Projects</a>
+            <a class="navitems"href="#feedback">FeedBack</a>
+            <a class="navitems"href="#acheivements">Acheivements</a>
+            <a class="navitems" href="#education">Education</a>
+            <a class="navitems" href="#contact">Contact Me</a>
+        </nav>
+    </div>
+
+
+<header id="introduction">
+    <div class="card">
+      <div class="introduction-container">
+        <div class="alignleft">
+          <h2>INTRODUCTION</h2>
+          <p class="lighttext">
+            I am Tejaswi.I am currently in my 3rd year of Bachelors Degree in Computer Science .I am Passionate about AI-powered drones and  ML. I thrive in
+            innovation and collaboration.
+            I intend to leverage my expertise in software development and innovative technologies to create solutions that enhance
+            user experiences, and drive business success.
+          </p>
+        </div>
+        <img src="Screenshot 2025-02-18 112017.png" alt="img not found" class="introduction-image">
+      </div>
+    </div>
+  </header>
+  
+  <section id="skills">
+    <div class="card">
+      <h2>SKILLS</h2>
+      <ul>
+        <li><b>Languages:</b> Python, C, C++, Java</li>
+        <li><b>Frameworks:</b> Django, Flask</li>
+        <li><b>Database:</b> MySQL, MongoDB</li>
+        <li><b>Operating Systems:</b> Windows, Linux</li>
+      </ul>
+    </div>
+  </section>
+  
+  <section id="projects">
+    <div class="card">
+      <h2>PROJECTS</h2>
+      <ul>
+        <li>
+          <h3> REAL ESTATE Application </h3>
+          <a href="https://github.com/tejaswipolcompally/tictactoe">Project Link</a>
+          <p>
+            Developed an innovative real estate app, simplifying house buying for clients and property listing for agents
+          </p>
+        </li>
+        <li>
+          <h3>  RETAIL LLM  </h3>
+          <a href="https://github.com/retailLLm/RETAILLLM">Project Link</a>
+          <p>
+            Fine-tuned LLAMA to Support salespersons with real-time insights and performance analysis.
+            Enhanced customer experience with LLM-powered search and personalized recommendations.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  
+  <section id="feedback">
+    <div class="card">
+      <h2>FEEDBACK</h2>
+      <form>
+        <ul>
+          <li>
+            <label for="name">Name</label>
+            <input type="text" id="name"/>
+          </li>
+          <li>
+            <label for="email">Email</label>
+            <input type="email" id="email"/>
+          </li>
+          <li>
+            <label for="Text">Feedback</label>
+            <input type="text" id="Text"/>
+          </li>
+          <li>
+            <h5> Please Provide Rating</h5>
+            <input type="radio" id="1" name="rating" value="1">
+            <label for="1">1 star</label><br>
+            <input type="radio" id="2" name="rating" value="2">
+            <label for="2">2 star</label><br>
+            <input type="radio" id="3" name="rating" value="3">
+            <label for="3">3 star</label><br>
+            <input type="radio" id="3" name="rating" value="3">
+            <label for="4">4 star</label><br>
+            <input type="radio" id="5" name="rating" value="5">
+            <label for="5">5 star</label><br>
+          </li>
+        </ul>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+  
+  <section id="acheivements">
+    <div class="card">
+      <h2>ACHIEVEMENTS</h2>
+      <ul>
+        <li>
+          One of the 75 winners of AMAZON HACKON coding round in India.
+        </li>
+        <li>
+          Awarded 1st prize in Ux WIZ competition Organized by TMI group for designing gamified learning platform.
+        </li>
+        <li>
+          Completed a comprehensive program at the Imagineering School, gaining skills in business strategies, startup
+          development, and innovative thinking to turn ideas into viable business models
+        </li>
+        <li>
+          Selected among the top 300 out of 21,000 participants for level 2 in the Bank of Baroda Hackathon, in
+          partnership with Microsoft Azure
+        </li>
+      </ul>
+    </div>
+  </section>
+  
+  <section id="education">
+    <div class="card">
+      <h2>EDUCATION</h2>
+      <table border="1px">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Institution</th>
+            <th>Duration</th>
+            <th>CGPA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bachelor of Technology (B.Tech) - Computer Science (CSE)</td>
+            <td>Keshav Memorial Institute of Technology, Hyderabad, India</td>
+            <td>2022-2026</td>
+            <td>9.5/10</td>
+          </tr>
+          <tr>
+            <td>Intermediate - MPC</td>
+            <td>Narayana Junior College, Hyderabad, India</td>
+            <td>2020-2022</td>
+            <td>98.3%</td>
+          </tr>
+          <tr>
+            <td>SSC (Secondary School Certificate)</td>
+            <td>Ravindra Bharathi School, Hyderabad, India</td>
+            <td>2019-2020</td>
+            <td>10/10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+  <footer id="contact">
+    <div class="card">
+      <h2>CONTACT ME</h2>
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/in/tejaswi-polcompally-048328273/">LinkedIn</a>
+        </li>
+        <li>
+          <a href="tel:9858679800">Phone</a>
+        </li>
+        <li>
+          <a href="mailto:tejaswi182005@gmail.com">Email</a>
+        </li>
+      </ul>
+      <p>&copy; 2025 Tejaswi | All Rights Reserved</p>
+    </div>
+  </footer>
