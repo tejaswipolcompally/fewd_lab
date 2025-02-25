@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PDF Upload</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card p-3">
+            <h3 class="mb-3">Upload PDF</h3>
+            <form enctype="multipart/form-data" method="post">
+                <div class="mb-3">
+                    <input 
+                        type="file" 
+                        class="form-control" 
+                        name="pdfUpload"
+                        accept=".pdf"
+                        required>
+                    <small class="text-muted">PDF only, 2MB max</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
